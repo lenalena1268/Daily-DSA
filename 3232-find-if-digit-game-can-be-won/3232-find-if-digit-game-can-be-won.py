@@ -1,21 +1,16 @@
 class Solution:
     def canAliceWin(self, nums: List[int]) -> bool:
         single = 0
-        double= 0
-        for num in nums:
-            if num < 10:
-                single += num
-            else:
-                double += num
-        if single >double:
-            return True
-        elif double > single:
-            return True
-        else:
-            return False
+        double = 0
+        for n in nums:
+            if n > 9:
+                double += n
+            else :
+                single += n
 
+        if single == double:
+            return False
+        else:
+            return True
 
         
-            
-                
-                
